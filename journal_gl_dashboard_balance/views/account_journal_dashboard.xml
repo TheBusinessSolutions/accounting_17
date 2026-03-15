@@ -9,7 +9,7 @@
 
             <xpath expr="//div[@id='dashboard_bank_cash_left']" position="inside">
 
-                <div class="o_journal_gl_balance mt8">
+                <div class="mt8 o_journal_gl_balance">
 
                     <button type="object"
                             name="action_open_gl_account"
