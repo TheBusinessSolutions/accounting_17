@@ -14,12 +14,9 @@
                     <button type="object"
                             name="action_open_gl_account"
                             class="btn btn-link p-0 text-muted">
-                        GL Report
+                        GL Report <field name="gl_balance" widget="monetary"/>
                     </button>
 
-                    <div>
-                        <field name="gl_balance" widget="monetary"/>
-                    </div>
 
                 </div>
 
