@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: journal_gl_dashboard_balance\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#. module: journal_gl_dashboard_balance
+#: model:ir.model.fields,field_description:journal_gl_dashboard_balance.field_account_journal__gl_balance
+msgid "GL Balance"
+msgstr "رصيد دفتر الأستاذ"
+
+#. module: journal_gl_dashboard_balance
+msgid "GL Report"
+msgstr "تقرير الحساب"
+
+#. module: journal_gl_dashboard_balance
+msgid "Current balance of the journal default account"
+msgstr "الرصيد الحالي للحساب الافتراضي في اليومية"
