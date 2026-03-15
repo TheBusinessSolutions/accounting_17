@@ -19,4 +19,4 @@ msgstr "رصيد دفتر الأستاذ"
 #. module: journal_gl_dashboard_balance
 #: model_terms:ir.ui.view,arch_db:journal_gl_dashboard_balance.view_account_journal_dashboard_gl_balance
 msgid "GL Report"
-msgstr "تقرير الحساب"
+msgstr "رصيد دفتر الأستاذ"
