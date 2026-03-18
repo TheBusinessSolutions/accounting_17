@@ -1,22 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_account_journal_dashboard_gl_balance" model="ir.ui.view">
-        <field name="name">account.journal.dashboard.gl.balance</field>
+    <record id="view_journal_dashboard_pro" model="ir.ui.view">
+        <field name="name">journal.dashboard.pro</field>
         <field name="model">account.journal</field>
         <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
         <field name="arch" type="xml">
 
             <xpath expr="//div[@id='dashboard_bank_cash_left']" position="inside">
 
-                <div class="mt8 o_journal_gl_balance">
+                <div class="mt8">
 
-                    <button type="object"
-                            name="action_open_gl_account"
-                            class="btn btn-link p-0 text-muted">
-                        GL Report <field name="gl_balance" widget="monetary"/>
-                    </button>
+                    <div>
+                        <strong>GL Balance:</strong>
+                        <field name="gl_balance" widget="monetary"/>
+                    </div>
 
+                    <div>
+                        <strong>Dashboard Balance:</strong>
+                        <field name="dashboard_balance" widget="monetary"/>
+                    </div>
+
+                    <div>
+                        <strong>Difference:</strong>
+                        <field name="balance_difference" widget="monetary"/>
+                    </div>
 
                 </div>
 

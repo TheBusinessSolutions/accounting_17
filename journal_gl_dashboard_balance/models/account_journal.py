@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from odoo import models, fields, api
 
 
@@ -15,54 +13,77 @@ class AccountJournal(models.Model):
     gl_balance = fields.Monetary(
         string="GL Balance",
         currency_field="company_currency_id",
-        compute="_compute_gl_balance",
-        help="Current balance of the journal default account"
+        compute="_compute_balances"
     )
 
-    def action_open_gl_account(self):
-        self.ensure_one()
+    dashboard_balance = fields.Monetary(
+        string="Dashboard Balance",
+        currency_field="company_currency_id",
+        compute="_compute_balances"
+    )
 
-        return {
-            "name": "GL Report",
-            "type": "ir.actions.act_window",
-            "res_model": "account.move.line",
-            "view_mode": "tree,form",
-            "domain": [
-                ("account_id", "=", self.default_account_id.id),
-                ("parent_state", "=", "posted"),
-                ("company_id", "=", self.company_id.id),
-            ],
-            "context": {
-                "create": False
-            },
-        }
+    balance_difference = fields.Monetary(
+        string="Difference",
+        currency_field="company_currency_id",
+        compute="_compute_balances"
+    )
 
     @api.depends("default_account_id")
-    def _compute_gl_balance(self):
+    def _compute_balances(self):
 
         journals = self.filtered(lambda j: j.default_account_id)
-        balances = {}
+        results_map = {}
 
         if journals:
-
             account_ids = journals.mapped("default_account_id").ids
             company_ids = journals.mapped("company_id").ids
+            journal_ids = journals.ids
 
             query = """
-                SELECT account_id, company_id, SUM(debit - credit) AS balance
-                FROM account_move_line
-                WHERE account_id IN %s
-                AND company_id IN %s
-                AND parent_state = 'posted'
-                GROUP BY account_id, company_id
+                SELECT 
+                    aml.account_id,
+                    aml.company_id,
+                    aml.journal_id,
+
+                    SUM(aml.debit - aml.credit) AS gl_balance,
+
+                    -- Dashboard-like (only same journal)
+                    SUM(CASE 
+                        WHEN aml.journal_id = aj.id 
+                        THEN (aml.debit - aml.credit)
+                        ELSE 0 
+                    END) AS dashboard_balance
+
+                FROM account_move_line aml
+                JOIN account_move am ON aml.move_id = am.id
+                JOIN account_journal aj ON aml.journal_id = aj.id
+
+                WHERE aml.account_id IN %s
+                  AND aml.company_id IN %s
+                  AND aml.journal_id IN %s
+                  AND am.state = 'posted'
+
+                GROUP BY aml.account_id, aml.company_id, aml.journal_id
             """
 
-            self.env.cr.execute(query, (tuple(account_ids), tuple(company_ids)))
-            results = self.env.cr.fetchall()
+            self.env.cr.execute(query, (
+                tuple(account_ids),
+                tuple(company_ids),
+                tuple(journal_ids),
+            ))
 
-            for account_id, company_id, balance in results:
-                balances[(account_id, company_id)] = balance
+            for account_id, company_id, journal_id, gl, dash in self.env.cr.fetchall():
+                results_map[(account_id, company_id, journal_id)] = (gl, dash)
 
         for journal in self:
-            key = (journal.default_account_id.id, journal.company_id.id)
-            journal.gl_balance = balances.get(key, 0.0)
+            key = (
+                journal.default_account_id.id,
+                journal.company_id.id,
+                journal.id
+            )
+
+            gl, dash = results_map.get(key, (0.0, 0.0))
+
+            journal.gl_balance = gl
+            journal.dashboard_balance = dash
+            journal.balance_difference = gl - dash
