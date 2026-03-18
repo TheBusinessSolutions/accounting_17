@@ -28,12 +28,8 @@ class AccountJournal(models.Model):
         compute="_compute_dashboard_data"
     )
 
-    # =========================
-    # COMPUTE
-    # =========================
     @api.depends("default_account_id")
     def _compute_dashboard_data(self):
-
         for journal in self:
             journal.balance = 0.0
             journal.payments_total = 0.0
@@ -55,7 +51,6 @@ class AccountJournal(models.Model):
                   AND am.state = 'posted'
                   AND aml.payment_id IS NOT NULL
             """, (account_id, company_id))
-
             payments = self.env.cr.fetchone()[0] or 0.0
 
             # Misc
@@ -68,19 +63,14 @@ class AccountJournal(models.Model):
                   AND am.state = 'posted'
                   AND aml.payment_id IS NULL
             """, (account_id, company_id))
-
             misc = self.env.cr.fetchone()[0] or 0.0
 
             journal.payments_total = payments
             journal.misc_total = misc
             journal.balance = payments + misc
 
-    # =========================
-    # ACTION (CLICK)
-    # =========================
     def action_open_journal_items(self):
         self.ensure_one()
-
         return {
             'type': 'ir.actions.act_window',
             'name': 'Journal Items',

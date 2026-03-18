@@ -1,29 +1,24 @@
 <odoo>
+    <data>
+        <record id="view_journal_dashboard_pro" model="ir.ui.view">
+            <field name="name">journal.dashboard.pro</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
+            <field name="arch" type="xml">
 
-    <record id="view_journal_dashboard_pro" model="ir.ui.view">
-        <field name="name">journal.dashboard.pro</field>
-        <field name="model">account.journal</field>
-        <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
-        <field name="arch" type="xml">
+                <xpath expr="//div[@id='dashboard_bank_cash_left']" position="inside">
+                    <div class="mt8">
+                        <!-- Clickable Balance with Tooltip -->
+                        <a type="object"
+                           name="action_open_journal_items"
+                           style="font-size:16px; font-weight:bold;"
+                           t-att-title="'Payments: %s\nMisc: %s' % (record.payments_total, record.misc_total)">
+                            💰 <field name="balance" widget="monetary"/>
+                        </a>
+                    </div>
+                </xpath>
 
-            <xpath expr="//div[@id='dashboard_bank_cash_left']" position="inside">
-
-                <div class="mt8">
-
-                    <!-- Clickable Balance -->
-                    <a type="object"
-                       name="action_open_journal_items"
-                       style="font-size:16px; font-weight:bold;"
-                       t-att-title="'Payments: %s\nMisc: %s' % (record.payments_total.value, record.misc_total.value)">
-
-                        💰 <field name="balance" widget="monetary"/>
-                    </a>
-
-                </div>
-
-            </xpath>
-
-        </field>
-    </record>
-
+            </field>
+        </record>
+    </data>
 </odoo>
