@@ -10,20 +10,14 @@
 
                 <div class="mt8">
 
-                    <div>
-                        <strong>GL Balance:</strong>
-                        <field name="gl_balance" widget="monetary"/>
-                    </div>
+                    <!-- Clickable Balance -->
+                    <a type="object"
+                       name="action_open_journal_items"
+                       style="font-size:16px; font-weight:bold;"
+                       t-att-title="'Payments: %s\nMisc: %s' % (record.payments_total.value, record.misc_total.value)">
 
-                    <div>
-                        <strong>Dashboard Balance:</strong>
-                        <field name="dashboard_balance" widget="monetary"/>
-                    </div>
-
-                    <div>
-                        <strong>Difference:</strong>
-                        <field name="balance_difference" widget="monetary"/>
-                    </div>
+                        💰 <field name="balance" widget="monetary"/>
+                    </a>
 
                 </div>
 
