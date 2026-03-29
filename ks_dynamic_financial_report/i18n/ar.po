@@ -1,0 +1,1611 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ks_dynamic_financial_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 19:17+0000\n"
+"PO-Revision-Date: 2026-03-29 19:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_df_report_account_type
+msgid ""
+"'accounts': it's the sum of the linked accounts,'ks_coa_type': it's the sum "
+"of leaf accoutns with such an Chart of account_type,'account_report': it's "
+"the amount of the related report,'total': it's the sum of the children of "
+"this record 'subtract': it's the difference of the children of this record "
+msgstr ""
+"'الحسابات': إنه مجموع الحسابات المرتبطة،'ks_coa_type': إنه مجموع الحسابات "
+"الورقية مع مخطط نوع_الحساب هذا،'account_report': إنه مبلغ التقرير ذي "
+"الصلة،'الإجمالي': إنه مجموع العناصر الفرعية لهذا السجل 'طرح': إنه الفرق بين "
+"العناصر الفرعية لهذا السجل"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "*** END OF DOCUMENT ***"
+msgstr "*** نهاية الوثيقة ***"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+msgid ": Age Payable"
+msgstr ": العمر المستحق"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+msgid ": Age Receivable"
+msgstr ": العمر المستحق"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+msgid ": Consolidated Journals"
+msgstr ": المجلات الموحدة"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+msgid ": Executive Summary"
+msgstr ": ملخص تنفيذي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+msgid ": General ledger"
+msgstr ": دفتر الأستاذ العام"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid ": Partner ledger"
+msgstr ": دفتر الشركاء"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid ": Tax Report"
+msgstr ": التقرير الضريبي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+msgid ": Trial Balance"
+msgstr ": ميزان المراجعة"
+
+#. module: ks_dynamic_financial_report
+#: model:mail.template,body_html:ks_dynamic_financial_report.ks_mail_templates
+msgid ""
+"<div class=\"container-fluid\">\n"
+"                    Hi <t t-out=\"object.env.user.name or ''\"></t>\n"
+"                    <br>\n"
+"                    <p>Please find below your <t t-out=\"ctx['ks_report_name']\"></t> attachments</p>\n"
+"                    <br>\n"
+"                    <b>\n"
+"                        Thanks\n"
+"                        <br>\n"
+"                        <t t-out=\"object.env.user.name or ''\"></t>\n"
+"                    </b>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div class=\"container-fluid\">\n"
+"                    مرحبًا <t t-out=\"object.env.user.name أو ''\"></t>\n"
+"                    <ر>\n"
+"                    <p>تجد أدناه <t t-out=\"ctx['ks_report_name']\"></t> مرفقاتك</p>\n"
+"                    <ر>\n"
+"                    <ب>\n"
+"                        شكرا\n"
+"                        <ر>\n"
+"                        <t t-out=\"object.env.user.name أو ''\"></t>\n"
+"                    </ب>\n"
+"                </div>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid ""
+"<span class=\"fa fa-bar-chart\"/>\n"
+"                Differentiate:"
+msgstr ""
+"<span class=\"fa fa-bar-chart\"/>\n"
+"                التفريق:"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_account_information
+msgid ""
+"<span class=\"fa fa-book\"/>\n"
+"                Account"
+msgstr ""
+"<span class=\"fa fa-book\"/>\n"
+"                الحساب"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_journals_filter
+msgid "<span class=\"fa fa-book\"/>journals"
+msgstr "<span class=\"fa fa-book\"/>المجلات"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "<span class=\"fa fa-calendar\" title=\"Dates\" role=\"img\" aria-label=\"Dates\"/>"
+msgstr "<span class=\"fa fa-calendar\" title=\"Dates\" role=\"img\" aria-label=\"Dates\"/>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid ""
+"<span class=\"fa fa-filter\"/>\n"
+"                Options:"
+msgstr ""
+"<span class=\"fa fa-filter\"/>\n"
+"                الخيارات:"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_analytic_filter
+msgid ""
+"<span class=\"fa fa-folder-open\"/>\n"
+"                Analytic"
+msgstr ""
+"<span class=\"fa fa-folder-open\"/>\n"
+"                تحليلية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_partner_filter
+msgid ""
+"<span class=\"fa fa-folder-open\"/>\n"
+"                Partners"
+msgstr ""
+"<span class=\"fa fa-folder-open\"/>\n"
+"                الشركاء"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_account_filter
+msgid ""
+"<span class=\"fa fa-user\"/>\n"
+"                Account:"
+msgstr ""
+"<span class=\"fa fa-user\"/>\n"
+"                الحساب:"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "<span>Ending Balance</span>"
+msgstr "<span>الرصيد النهائي</span>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "<span>Initial Balance</span>"
+msgstr "<span>الرصيد الأولي</span>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+msgid "<span>Total</span>"
+msgstr "<span>الإجمالي</span>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "<strong>Accounts:</strong>"
+msgstr "<strong>الحسابات:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+msgid "<strong>Analytic:</strong>"
+msgstr "<strong>تحليلية:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+msgid "<strong>As Of Date:</strong>"
+msgstr "<strong>اعتبارًا من التاريخ:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid "<strong>As of Date:</strong>"
+msgstr "<strong>اعتبارًا من التاريخ:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid "<strong>Comparison Date From:</strong>"
+msgstr "<strong>تاريخ المقارنة من:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid "<strong>Comparison Date To:</strong>"
+msgstr "<strong>تاريخ المقارنة إلى:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid "<strong>Date From:</strong>"
+msgstr "<strong>التاريخ من:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid "<strong>Date To:</strong>"
+msgstr "<strong>تاريخ إلى:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+msgid "<strong>Display Account</strong>"
+msgstr "<strong>عرض الحساب</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+msgid "<strong>Journals:</strong>"
+msgstr "<strong>المجلات:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "<strong>Partners:</strong>"
+msgstr "<strong>الشركاء:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "<strong>Reconciled:</strong>"
+msgstr "<strong>مصالحة:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+msgid "<strong>Tags:</strong>"
+msgstr "<strong>العلامات:</strong>"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_account_account
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Account"
+msgstr "الحساب "
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+msgid "Account Name"
+msgstr "إسم الحساب"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_children_id
+msgid "Account Report"
+msgstr "تقرير الحساب"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.act_window,name:ks_dynamic_financial_report.ks_dfr_account_type_action
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__type
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_df_report_account_type__ks_coa_type
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_account_type_menu
+msgid "Account Type"
+msgstr "نوع الحساب"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_account_account__account_type
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__ks_account_type
+msgid ""
+"Account Type is used for information purpose, to generate country-specific "
+"legal reports, and set the rules to close a fiscal year and generate opening"
+" entries."
+msgstr ""
+"يُستخدم نوع الحساب في إنشاء التقارير  القانونية المخصصة لكل دولة، وتضع "
+"القواعد اللازمة لإقفال السنة المالية وإنشاء القيود الافتتاحية للسنة المالية "
+"اللاحقة. "
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_dfr_account_type_ids
+msgid "Account Types"
+msgstr "أنواع الحسابات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_df_report_account_ids
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_df_report_account_type__accounts
+msgid "Accounts"
+msgstr "الحسابات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_actions_act_url__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_actions_act_window__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_actions_act_window_close__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_actions_actions__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_actions_client__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_actions_report__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_actions_server__type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ir_cron__type
+msgid "Action Type"
+msgstr "نوع الإجراء"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_ir_actions_actions
+msgid "Actions"
+msgstr "الإجراءات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_pay_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_pay_menu
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_payable0
+msgid "Age Payable"
+msgstr "العمر المستحق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_age_pay_action
+msgid "Age Payable Report"
+msgstr "تقرير العمر المستحق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_rec_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_rec_menu
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_receivable0
+msgid "Age Receivable"
+msgstr "العمر المستحق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_age_rec_action
+msgid "Age Receivable Report"
+msgstr "تقرير العمر المستحق"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_journals_filter
+msgid "All"
+msgstr "الجميع"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_analytic_ids
+msgid "Analytic Accounts"
+msgstr "الحسابات التحليلية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_analytic_account_visibility
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_analytic_account_visibility
+msgid "Analytic Filter"
+msgstr "مرشح تحليلي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "العلامات التحليلية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "Apply"
+msgstr "يتقدم"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_as_on_date
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_as_on_date
+msgid "As on date"
+msgstr "كما في التاريخ"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_assets0
+msgid "Assets"
+msgstr "أصول"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Balance"
+msgstr "توازن"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_dynamic_reports_bal_sheet_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_dynamic_finance_bal_sheet
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet
+msgid "Balance Sheet"
+msgstr "الميزانية العمومية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__asset_cash
+msgid "Bank and Cash"
+msgstr "البنك والنقد"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_bank_cash
+msgid "Bank and Cash Accounts"
+msgstr "الحسابات المصرفية والنقدية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_account_filter
+msgid "Both"
+msgstr "كلاهما"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_dynamic_reports_cash_flow_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_dynamic_finance
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_cash_flow0
+msgid "Cash Flow Statement"
+msgstr "بيان التدفق النقدي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_account_account__ks_cash_flow_category
+msgid "Cash Flow type"
+msgstr "نوع التدفق النقدي"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ins_account_financial_report_financing_activity1
+msgid "Cash Flows From Financing Activities"
+msgstr "التدفقات النقدية من الأنشطة التمويلية"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ins_cash_in_financial_1
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_cash_in_investing1
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_cash_in_opertaion1
+msgid "Cash In"
+msgstr "النقدية في"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ins_cash_out_financial_2
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_cash_out_investin2
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_cash_out_opertaion2
+msgid "Cash Out"
+msgstr "صرف نقدي"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_paid_operating_activities0
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_paid_operating_activities_closing_1
+msgid "Cash Paid For Operating Activities"
+msgstr "النقدية المدفوعة للأنشطة التشغيلية"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_cash_closing_flow0
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_cash_flow02
+msgid "Cash and cash equivalents,beginning period"
+msgstr "النقد والنقد المعادل، فترة البداية"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_equivalents_closing_bal
+msgid "Cash and cash equivalents,closing balance"
+msgstr "النقد وما في حكمه، الرصيد الختامي"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_cash_flow01
+msgid "Cash and cash equivelents, beginning period"
+msgstr "النقد والنقد المعادل، فترة البداية"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_main_operations0
+msgid "Cash flow For Operating Activities"
+msgstr "التدفق النقدي للأنشطة التشغيلية"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_financing_activity0
+msgid "Cash flows from Investing Activities"
+msgstr "التدفقات النقدية من الأنشطة الاستثمارية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "Change_date_range"
+msgstr "Change_date_range"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_differentiation
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_differentiation
+msgid "Compare Among Intervals"
+msgstr "قارن بين الفترات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_new_com
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_new_com
+msgid "Comparison Intervals"
+msgstr "فترات المقارنة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_cj_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_cj_menu
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_cj0
+msgid "Consolidate Journal"
+msgstr "توحيد المجلة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_cons_journal_action
+msgid "Consolidate Journal Report"
+msgstr "توحيد تقرير المجلة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__expense_direct_cost
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_cost_of_rev0
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_cost_of_rev1
+msgid "Cost of Revenue"
+msgstr "تكلفة الإيرادات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__create_uid
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__create_uid
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__create_uid
+msgid "Created by"
+msgstr "تم إنشاؤها بواسطة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__create_date
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__create_date
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__create_date
+msgid "Created on"
+msgstr "تم الإنشاء بتاريخ"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Credit"
+msgstr "ائتمان"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__liability_credit_card
+msgid "Credit Card"
+msgstr "بطاقة إئتمان"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_debit_credit
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_debit_credit
+msgid "Credit-Debit "
+msgstr "الائتمان والخصم"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__asset_current
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_cur_assets0
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_current_assets
+msgid "Current Assets"
+msgstr "الأصول الحالية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__liability_current
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_current_liability0
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_current_liability1
+msgid "Current Liabilities"
+msgstr "الالتزامات المتداولة"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_current_year_allocated_earnings
+msgid "Current Year Allocated Earnings"
+msgstr "الأرباح المخصصة للعام الحالي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__equity_unaffected
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_current_year_earnings
+msgid "Current Year Earnings"
+msgstr "أرباح العام الحالي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "Custom"
+msgstr "مخصص"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_base__ks_partner_type__customer
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_partner_type__customer
+msgid "Customer Only"
+msgstr "العميل فقط"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "DFR"
+msgstr "دفر"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_date_fil_visibility
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_date_fil_visibility
+msgid "Date Filter Visible"
+msgstr "مرشح التاريخ مرئي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_comparison_range
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_comparison_range
+msgid "Date Range Constrained"
+msgstr "النطاق الزمني مقيد"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "Date:"
+msgstr "تاريخ:"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_lines
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Debit"
+msgstr "دَين"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__expense_depreciation
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_depriciation0
+msgid "Depreciation"
+msgstr "الاستهلاك"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "Detail reports"
+msgstr "تقارير تفصيلية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_res_config_settings__ks_disable_bs_sign
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "Disable Balance Sheet Sign"
+msgstr "تعطيل علامة الميزانية العمومية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_res_config_settings__ks_disable_trial_en_bal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "Disable Trial Initial Balance"
+msgstr "تعطيل الرصيد التجريبي الأولي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "Disable initial balance from income/expense  account."
+msgstr "تعطيل الرصيد الأولي من حساب الدخل/المصروفات."
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid ""
+"Disable negative signs for Assets and Liabilities from the balance sheet."
+msgstr "تعطيل العلامات السلبية للأصول والالتزامات من الميزانية العمومية."
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__display_name
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__display_name
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_display_detail__detail_flat
+msgid "Display children flat"
+msgstr "عرض الأطفال بشكل مسطح"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_display_detail__detail_with_hierarchy
+msgid "Display children with hierarchy"
+msgstr "عرض الأطفال مع التسلسل الهرمي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_display_detail
+msgid "Display details"
+msgstr "عرض التفاصيل"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "Draft Entries"
+msgstr "مسودة الإدخالات"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_report_action
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_form_view
+msgid "Dynamic Financial Report"
+msgstr "التقرير المالي الديناميكي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.act_window,name:ks_dynamic_financial_report.ks_df_create_dyn_finance_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_create_dyn_finance_menu
+msgid "Dynamic Financial Reports"
+msgstr "التقارير المالية الديناميكية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_form_view
+msgid "Dynamic Report"
+msgstr "تقرير ديناميكي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_form_view
+msgid "Dynamic Report Filters"
+msgstr "عوامل تصفية التقارير الديناميكية"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_equity
+msgid "EQUITY"
+msgstr "عدالة"
+
+#. module: ks_dynamic_financial_report
+#: model:mail.template,name:ks_dynamic_financial_report.ks_mail_templates
+msgid "Email template"
+msgstr "قالب البريد الإلكتروني"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_res_config_settings__ks_enable_ledger_in_bal
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "Enable Ledger Initial Balance"
+msgstr "تمكين الرصيد الأولي لدفتر الأستاذ"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_res_config_settings__ks_enable_net_tax
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "Enable Net Tax"
+msgstr "تمكين صافي الضرائب"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "Enable initial balance in partner/general Ledger."
+msgstr "تمكين الرصيد الأولي في الشريك/دفتر الأستاذ العام."
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dfr_res_config_settings_view_form_inherited
+msgid "Enable net tax on tax report."
+msgstr "تمكين صافي الضريبة في التقرير الضريبي."
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "End Date :"
+msgstr "تاريخ الانتهاء :"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "End of Last Financial Year"
+msgstr "نهاية السنة المالية الماضية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "End of Last Month"
+msgstr "نهاية الشهر الماضي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "End of Last Quarter"
+msgstr "نهاية الربع الأخير"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+msgid "Ending Balance"
+msgstr "الرصيد الختامي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Entry Label"
+msgstr "تسمية الإدخال"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__equity
+msgid "Equity"
+msgstr "عدالة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_es_action
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_executive_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_es_menu
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_es0
+msgid "Executive Summary"
+msgstr "ملخص تنفيذي"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_expense_data
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_report_expense0
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_report_expense2
+msgid "Expense"
+msgstr "حساب"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__expense
+msgid "Expenses"
+msgstr "نفقات"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_repport_buttons
+msgid "Export (XLSX)"
+msgstr "تصدير (XLSX)"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__asset_fixed
+msgid "Fixed Assets"
+msgstr "الأصول الثابتة"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "From:"
+msgstr "من:"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_gl_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_gl_menu
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_gl0
+msgid "General Ledger"
+msgstr "دفتر الأستاذ العام"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_gel_bal_action
+msgid "General Ledger Report"
+msgstr "تقرير دفتر الأستاذ العام"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_gross_profit0
+msgid "Gross Profit"
+msgstr "إجمالي الربح"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_hide_default_reports
+msgid "Hide default reports"
+msgstr "إخفاء التقارير الافتراضية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_ks_dynamic_financial_reports
+msgid "Holds information of reports lines"
+msgstr "يحمل معلومات خطوط التقارير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__id
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__id
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__id
+msgid "ID"
+msgstr "بطاقة تعريف"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__income
+msgid "Income"
+msgstr "دخل"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Initial Balance"
+msgstr "الرصيد الأولي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_intervals
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_intervals
+msgid "Interval Filter"
+msgstr "مرشح الفاصل الزمني"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "JRNL"
+msgstr "JRNL"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_consolidate_journal
+msgid "Journal"
+msgstr "مجلة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_journal_filter_visiblity
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_journal_filter_visiblity
+msgid "Journal Filter"
+msgstr "تصفية المجلة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_journal_ids
+msgid "Journals"
+msgstr "المجلات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_company_id
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_company_id
+msgid "Ks Company"
+msgstr "شركة كي اس"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_email_report_value
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_email_report_value
+msgid "Ks Email Report Value"
+msgstr "قيمة تقرير البريد الإلكتروني لـ Ks"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_user_id
+msgid "Ks User"
+msgstr "مستخدم كانساس"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_liability0
+msgid "LIABILITIES"
+msgstr "الإلتزامات"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "Last Financial Year"
+msgstr "السنة المالية الماضية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "Last Month"
+msgstr "الشهر الماضي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "Last Quarter"
+msgstr "الربع الأخير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__write_uid
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__write_uid
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__write_date
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__write_date
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث بتاريخ"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__account_account__account_type__liquidity
+msgid "Liquidity"
+msgstr "السيولة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_report_menu_id
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_report_menu_id
+msgid "Menu item for the report"
+msgstr "عنصر القائمة للتقرير"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Move"
+msgstr "يتحرك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__ks_name
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_df_executive_summary
+msgid "Name"
+msgstr "اسم"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid "Net Amount"
+msgstr "المبلغ الصافي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid ""
+"Net Amount\n"
+"                                                        <br/>"
+msgstr ""
+"المبلغ الصافي\n"
+"                                                        <br/>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid ""
+"Net Amount\n"
+"                                                <br/>"
+msgstr ""
+"المبلغ الصافي\n"
+"                                                <br/>"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_net_profit0
+msgid "Net Profit"
+msgstr "صافي الربح"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid ""
+"Net Tax\n"
+"                                                        <br/>"
+msgstr ""
+"صافي الضريبة\n"
+"                                                        <br/>"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid ""
+"Net Tax\n"
+"                                                <br/>"
+msgstr ""
+"صافي الضريبة\n"
+"                                                <br/>"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_net_in_out_equivalents
+msgid "Net increase in cash and cash equivalents"
+msgstr "صافي الزيادة في النقد وما في حكمه"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "No"
+msgstr "لا"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "No Comparison"
+msgstr "لا مقارنة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_display_detail__no_detail
+msgid "No detail"
+msgstr "لا تفاصيل"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__asset_non_current
+msgid "Non-current Assets"
+msgstr "الأصول غير المتداولة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__liability_non_current
+msgid "Non-current Liabilities"
+msgstr "الالتزامات غير المتداولة"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "Number of periods :"
+msgstr "عدد الفترات :"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__off_balance
+msgid "Off-Balance Sheet"
+msgstr "خارج الميزانية العمومية"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_operating_incm1
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_oi
+msgid "Operating Income"
+msgstr "الدخل التشغيلي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__income_other
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_ext_other_income0
+msgid "Other Income"
+msgstr "دخل آخر"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_parent_id
+msgid "Parent"
+msgstr "الوالد"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_menu_parent_id
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_menu_parent_id
+msgid "Parent Menu"
+msgstr "قائمة الوالدين"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Partner"
+msgstr "شريك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_partner_account_type_filter
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_partner_account_type_filter
+msgid "Partner By Account Filter"
+msgstr "شريك حسب تصفية الحساب"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_partner_filter
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_partner_filter
+msgid "Partner Filter"
+msgstr "مرشح الشريك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_pl_action
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_partner_ledger0
+msgid "Partner Ledger"
+msgstr "دفتر الأستاذ الشريك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_partner_led_action
+msgid "Partner Ledger Report"
+msgstr "تقرير دفتر الأستاذ الشريك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__partner_category_ids
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__partner_category_ids
+msgid "Partner Tag"
+msgstr "علامة الشريك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_partner_type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_partner_type
+msgid "Partner Type"
+msgstr "نوع الشريك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_pl_menu
+msgid "Partner ledger"
+msgstr "دفتر الأستاذ الشريك"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_partner_ids
+msgid "Partners"
+msgstr "الشركاء"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__liability_payable
+msgid "Payable"
+msgstr "مستحق الدفع"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_base__type__payable
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__type__payable
+msgid "Payable only"
+msgstr "تدفع فقط"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_payables
+msgid "Payables"
+msgstr "الذمم الدائنة"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_plus_fixed_assets
+msgid "Plus Fixed Assets"
+msgstr "بالإضافة إلى الأصول الثابتة"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_plus_non_current_liabilities
+msgid "Plus Non Current Liabilities"
+msgstr "بالإضافة إلى الالتزامات غير المتداولة"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_plus_non_concurrent_assets
+msgid "Plus Non-current Assets"
+msgstr "بالإضافة إلى الأصول غير المتداولة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_posted_entries
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_posted_entries
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_account_report_trial_balance
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_general_ledger
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "Posted Entries"
+msgstr "المشاركات المنشورة"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "Posted Entries,Draft Entries"
+msgstr "الإدخالات المنشورة، مسودات الإدخالات"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "Posted entries"
+msgstr "المشاركات المنشورة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__asset_prepayments
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_prepayments
+msgid "Prepayments"
+msgstr "المدفوعات المسبقة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_report_line_sign__1
+msgid "Preserve balance sign"
+msgstr "علامة الحفاظ على التوازن"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "Previous Period"
+msgstr "الفترة السابقة"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_bs_pre_year_unallocate_earnings
+msgid "Previous Years Unallocated Earnings"
+msgstr "أرباح السنوات السابقة غير المخصصة"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_repport_buttons
+msgid "Print (Pdf)"
+msgstr "طباعة (قوات الدفاع الشعبي)"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_pnl0
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_menu_action_account_report_pnl
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_pnl0
+msgid "Profit and Loss"
+msgstr "الربح والخسارة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports_account__ks_account_type__asset_receivable
+msgid "Receivable"
+msgstr "مستحق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_base__type__receivable
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__type__receivable
+msgid "Receivable Only"
+msgstr "المستحق فقط"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_receivable
+msgid "Receivables"
+msgstr "المستحقات"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_report_menu_id
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_report_menu_id
+msgid "Report Menu"
+msgstr "قائمة التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_df_report_account_report_ids
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_df_report_account_type__account_report
+msgid "Report Value"
+msgstr "قيمة التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_name
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__report_name
+msgid "Reports Name"
+msgstr "اسم التقارير"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_bs_ret_ear
+msgid "Retained Earnings"
+msgstr "الأرباح المحتجزة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_report_line_sign__-1
+msgid "Reverse balance sign"
+msgstr "علامة التوازن العكسي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_repport_buttons
+msgid "Send Email"
+msgstr "إرسال البريد الإلكتروني"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid ""
+"Show\n"
+"                    Unreconciled Entries"
+msgstr ""
+"عرض\n"
+"                    إدخالات غير التوفيق"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid ""
+"Show\n"
+"                    reconciled Entriess"
+msgstr ""
+"عرض\n"
+"                    إدخالات التوفيق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_report_line_sign
+msgid "Sign on Reports"
+msgstr "تسجيل الدخول التقارير"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_differentiate_filter
+msgid "Start Date :"
+msgstr "تاريخ البدء :"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_df_report_account_type__subtract
+msgid "Subtraction"
+msgstr "الطرح"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_base__ks_partner_type__supplier
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_partner_type__supplier
+msgid "Supplier Only"
+msgstr "المورد فقط"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_tax_report
+msgid "Tax"
+msgstr "ضريبة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_tax_report_action
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_tax_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_tax_report_menu
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_tax_report
+msgid "Tax Report"
+msgstr "تقرير الضرائب"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_generic_tax_filter
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_generic_tax_filter
+msgid "Tax Report Filter"
+msgstr "تصفية التقرير الضريبي"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "This Financial Year"
+msgstr "هذه السنة المالية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "This Quarter"
+msgstr "هذا الربع"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "To Print Report With Details"
+msgstr "لطباعة التقرير بالتفاصيل"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "To change date range"
+msgstr "لتغيير النطاق الزمني"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "Today"
+msgstr "اليوم"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields.selection,name:ks_dynamic_financial_report.selection__ks_dynamic_financial_reports__ks_df_report_account_type__total
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_age_receivable
+msgid "Total"
+msgstr "المجموع"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_total_income0
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_report_total_income1
+msgid "Total Income"
+msgstr "إجمالي الدخل"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.client,name:ks_dynamic_financial_report.ks_df_tb_action
+#: model:ir.ui.menu,name:ks_dynamic_financial_report.ks_df_tb_menu
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_df_tb0
+msgid "Trial Balance"
+msgstr "ميزان المراجعة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.actions.report,name:ks_dynamic_financial_report.ks_dynamic_financial_trial_bal_action
+msgid "Trial Balance Report"
+msgstr "تقرير ميزان المراجعة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_account_account__account_type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_df_report_account_type
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports_account__ks_account_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_unposted_entries
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_unposted_entries
+msgid "UnPosted Entries"
+msgstr "الإدخالات غير المنشورة"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "UnPosted Entries(Draft)"
+msgstr "الإدخالات غير المنشورة (مسودة)"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "UnPosted entries"
+msgstr "الإدخالات غير المنشورة"
+
+#. module: ks_dynamic_financial_report
+#: model:ks.dynamic.financial.reports,ks_name:ks_dynamic_financial_report.ks_dynamic_financial_balancesheet_unallocated_earnings
+msgid "Unallocated Earnings"
+msgstr "الأرباح غير المخصصة"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_unfold_all_lines
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_unfold_all_lines
+msgid "Unfold Lines Filter"
+msgstr "تتكشف خطوط التصفية"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "Unreconciled"
+msgstr "غير التوفيق"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_dynamic_financial_partner_ledger
+msgid "Yes"
+msgstr "نعم"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_account_filter_visiblity
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_account_filter_visiblity
+msgid "account Filter"
+msgstr "مرشح الحساب"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_dif_filter_bool
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_dif_filter_bool
+msgid "diff bool "
+msgstr "فرق منطقي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_generic_tax_filter
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_generic_tax_filter
+msgid "display tax report filter in tax report"
+msgstr "عرض مرشح التقرير الضريبي في التقرير الضريبي"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_debit_credit
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_debit_credit
+msgid "display the Credit and debit filter in the report"
+msgstr "عرض عامل تصفية الائتمان والمدينة في التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_account_filter_visiblity
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_account_filter_visiblity
+msgid "display the account filter in the report"
+msgstr "عرض عامل تصفية الحساب في التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_analytic_account_visibility
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_analytic_account_visibility
+msgid "display the analytic filters"
+msgstr "عرض المرشحات التحليلية"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_differentiation
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_differentiation
+msgid "display the differentiation filter"
+msgstr "عرض مرشح التمايز"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_journal_filter_visiblity
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_journal_filter_visiblity
+msgid "display the journal filter in the report"
+msgstr "عرض عامل تصفية دفتر اليومية في التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_partner_filter
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_partner_filter
+msgid "display the partner filter in the report"
+msgstr "عرض عامل تصفية الشريك في التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_partner_account_type_filter
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_partner_account_type_filter
+msgid "display the partner type account filter in the report"
+msgstr "عرض عامل تصفية حساب نوع الشريك في التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_unfold_all_lines
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_unfold_all_lines
+msgid "display the unfold all options in report"
+msgstr "عرض تتكشف كافة الخيارات في التقرير"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_ks_dynamic_financial_reports_account
+msgid "ks.dynamic.financial.reports.account"
+msgstr "ks.dynamic.financial.reports.account"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_due_bucket_1
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_due_bucket_1
+msgid "ks_due_bucket 1"
+msgstr "ks_due_bucket 1"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_due_bucket_2
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_due_bucket_2
+msgid "ks_due_bucket 2"
+msgstr "ks_due_bucket 2"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_due_bucket_3
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_due_bucket_3
+msgid "ks_due_bucket 3"
+msgstr "ks_due_bucket 3"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_due_bucket_4
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_due_bucket_4
+msgid "ks_due_bucket 4"
+msgstr "ks_due_bucket 4"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_due_bucket_5
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_due_bucket_5
+msgid "ks_due_bucket 5"
+msgstr "ks_due_bucket 5"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model,name:ks_dynamic_financial_report.model_ks_dynamic_financial_base
+msgid "ks_dynamic_financial_base"
+msgstr "ks_dynamic_financial_base"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_level
+msgid "ks_level"
+msgstr "ks_level"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_label_filter
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_label_filter
+msgid "label"
+msgstr "ملصق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_reconciled
+#: model:ir.model.fields,field_description:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_reconciled
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_extra_ks_df_informations
+msgid "reconciled"
+msgstr "التوفيق"
+
+#. module: ks_dynamic_financial_report
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_base__ks_intervals
+#: model:ir.model.fields,help:ks_dynamic_financial_report.field_ks_dynamic_financial_reports__ks_intervals
+msgid "specify if the report use ks_intervals or single date"
+msgstr "حدد ما إذا كان التقرير يستخدم ks_intervals أو تاريخًا واحدًا"
+
+#. module: ks_dynamic_financial_report
+#: model_terms:ir.ui.view,arch_db:ks_dynamic_financial_report.ks_searchview_date_filter
+msgid "to:"
+msgstr "ل:"
+
+#. module: ks_dynamic_financial_report
+#: model:mail.template,subject:ks_dynamic_financial_report.ks_mail_templates
+msgid "{{ctx['ks_report_name']}} Attachments"
+msgstr "{{ctx['ks_report_name']}} مرفقات"
