@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@id='total']" position="after">
+            <div class="row mt-4 mb-4" t-if="o.is_invoice(include_receipts=True)" name="partner_balances">
+                <div class="col-12">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="text-start"><strong>Balance Before this Invoice:</strong></td>
+                                <td class="text-end">
+                                    <span t-field="o.partner_balance_before" 
+                                          t-options="{'widget': 'monetary', 'display_currency': o.company_currency_id}"/>
+                                </td>
+                            </tr>
+                            <!-- Only show "Balance After" when invoice is actually posted -->
+                            <tr t-if="o.state == 'posted'">
+                                <td class="text-start"><strong>Balance After this Invoice:</strong></td>
+                                <td class="text-end">
+                                    <span t-field="o.partner_balance_after" 
+                                          t-options="{'widget': 'monetary', 'display_currency': o.company_currency_id}"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

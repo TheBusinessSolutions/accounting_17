@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# Module: invoice_partner_balance
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-16 00:00+0000\n"
+"PO-Revision-Date: 2026-04-16 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+
+#. module: invoice_partner_balance
+#: model:ir.model.fields,field_description:invoice_partner_balance.field_account_move__partner_balance_before
+msgid "Partner Balance Before"
+msgstr "رصيد الشريك قبل هذه الفاتورة"
+
+#. module: invoice_partner_balance
+#: model:ir.model.fields,field_description:invoice_partner_balance.field_account_move__partner_balance_after
+msgid "Partner Balance After"
+msgstr "رصيد الشريك بعد هذه الفاتورة"
+
+#. module: invoice_partner_balance
+#: model_terms:ir.ui.view,arch_db:invoice_partner_balance.view_move_form_inherit_partner_balance
+msgid "Refresh Balance"
+msgstr "تحديث الرصيد"
+
+#. module: invoice_partner_balance
+#: model_terms:ir.ui.view,arch_db:invoice_partner_balance.view_move_form_inherit_partner_balance
+msgid "Customer/Supplier Balance"
+msgstr "رصيد العميل / المورد"
+
+#. module: invoice_partner_balance
+#: model_terms:ir.ui.view,arch_db:invoice_partner_balance.report_invoice_document_inherit
+msgid "Balance Before this Invoice:"
+msgstr "الرصيد قبل هذه الفاتورة:"
+
+#. module: invoice_partner_balance
+#: model_terms:ir.ui.view,arch_db:invoice_partner_balance.report_invoice_document_inherit
+msgid "Balance After this Invoice:"
+msgstr "الرصيد بعد هذه الفاتورة:"
