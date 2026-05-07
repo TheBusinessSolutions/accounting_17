@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cash_shift_handover_form" model="ir.ui.view">
+        <field name="name">cash.shift.handover.form</field>
+        <field name="model">cash.shift.handover</field>
+        <field name="arch" type="xml">
+            <form string="Cash Shift Handover">
+                <header>
+                    <button name="action_submit_handover" 
+                            string="📤 Submit" 
+                            type="object" 
+                            class="btn-primary" 
+                            invisible="state != 'draft' or outgoing_user_id != uid"/>
+                    
+                    <button name="action_validate_handover" 
+                            string="✅ Validate" 
+                            type="object" 
+                            class="btn-success" 
+                            invisible="state != 'pending_validation' or incoming_user_id != uid"/>
+                    
+                    <button name="action_open_resolve_wizard" 
+                            string="🔧 Resolve Variance" 
+                            type="object" 
+                            class="btn-warning" 
+                            groups="cash_shift_handover.group_cash_shift_manager"
+                            invisible="state != 'disputed'"/>
+
+                    <button name="action_reverse_handover" 
+                            string="↩️ Reverse for Correction" 
+                            type="object" 
+                            class="btn-secondary" 
+                            groups="cash_shift_handover.group_cash_shift_manager"
+                            invisible="state not in ['validated', 'disputed']"/>
+                    
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pending_validation,validated,disputed,resolved"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="🔻 Outgoing">
+                            <field name="outgoing_user_id" readonly="1"/>
+                            <field name="declared_amount" widget="monetary" 
+                                   readonly="state != 'draft' or outgoing_user_id != uid"/>
+                            <field name="outgoing_notes"/>
+                        </group>
+                        <group string="🔺 Incoming">
+                            <field name="incoming_user_id" 
+                                   readonly="state != 'draft'" 
+                                   domain="[('id', '!=', outgoing_user_id)]"/>
+                            <field name="counted_amount" widget="monetary" 
+                                   readonly="state != 'pending_validation' or incoming_user_id != uid"/>
+                            <field name="difference" widget="monetary" 
+                                   class="text-danger" invisible="difference == 0"/>
+                            <field name="incoming_notes" readonly="state == 'draft'"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Journals">
+                            <group>
+                                <field name="cash_journal_id" string="Outbound Journal" readonly="state != 'draft'"/>
+                                <field name="inbound_journal_id" string="Inbound Journal" 
+                                       readonly="state != 'draft'" 
+                                       placeholder="Empty if same box"/>
+                            </group>
+                        </page>
+                        
+                        <page string="Accounting Entries">
+                            <separator string="Generated Journal Entries"/>
+                            <group>
+                                <group string="Outgoing Entry">
+                                    <field name="move_out_id" readonly="1" widget="many2one" context="{'form_view_ref': 'account.view_move_form'}"/>
+                                </group>
+                                <group string="Incoming Entry">
+                                    <field name="move_in_id" readonly="1" widget="many2one" context="{'form_view_ref': 'account.view_move_form'}"/>
+                                </group>
+                                <group string="Resolution Entry" invisible="not move_resolve_id">
+                                    <field name="move_resolve_id" readonly="1" widget="many2one" context="{'form_view_ref': 'account.view_move_form'}"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Resolution">
+                            <field name="resolution_notes" readonly="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_cash_shift_handover_tree" model="ir.ui.view">
+        <field name="name">cash.shift.handover.tree</field>
+        <field name="model">cash.shift.handover</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="outgoing_user_id"/>
+                <field name="incoming_user_id"/>
+                <field name="declared_amount"/>
+                <field name="counted_amount"/>
+                <field name="difference"/>
+                <field name="state" widget="badge" decoration-success="state=='validated'" decoration-warning="state=='disputed'" decoration-muted="state=='resolved'"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

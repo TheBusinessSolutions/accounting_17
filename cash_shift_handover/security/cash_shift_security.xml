@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Group Definition -->
+    <record id="group_cash_shift_user" model="res.groups">
+        <field name="name">Cash Shift User</field>
+        <field name="category_id" ref="base.module_category_accounting"/>
+        <field name="comment">Can create and validate cash handovers.</field>
+    </record>
+
+    <record id="group_cash_shift_manager" model="res.groups">
+        <field name="name">Cash Shift Manager</field>
+        <field name="category_id" ref="base.module_category_accounting"/>
+        <field name="comment">Full access to all handovers and variance resolution.</field>
+        <field name="implied_ids" eval="[(4, ref('group_cash_shift_user'))]"/>
+    </record>
+</odoo>

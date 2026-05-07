@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cash_shift_resolve_wizard_form" model="ir.ui.view">
+        <field name="name">cash.shift.resolve.wizard.form</field>
+        <field name="model">cash.shift.resolve.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Resolve Variance">
+                <group>
+                    <field name="handover_id" invisible="1"/>
+                    <field name="difference" widget="monetary"/>
+                    <field name="resolution_type" widget="radio"/>
+                    <field name="account_id"/>
+                    <field name="partner_id" invisible="resolution_type != 'employee'" required="resolution_type == 'employee'"/>
+                    <field name="notes"/>
+                </group>
+                <footer>
+                    <button name="action_resolve" string="Confirm" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cash_shift_user,cash.shift.handover.user,model_cash_shift_handover,cash_shift_handover.group_cash_shift_user,1,1,1,0
+access_cash_shift_manager,cash.shift.handover.manager,model_cash_shift_handover,cash_shift_handover.group_cash_shift_manager,1,1,1,1
+access_resolve_wizard_user,cash.shift.resolve.wizard.user,model_cash_shift_resolve_wizard,cash_shift_handover.group_cash_shift_user,1,1,1,0
