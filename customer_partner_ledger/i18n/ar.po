@@ -1,0 +1,242 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* customer_partner_ledger
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-07 18:19+0000\n"
+"PO-Revision-Date: 2026-05-07 18:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Language: ar\n"
+
+#. module: customer_partner_ledger
+#: model:ir.actions.report,print_report_name:customer_partner_ledger.customer_ledger_report
+msgid "'Customer Ledger - %s' % (object.customer_id.name)"
+msgstr "'كشف حساب العميل - %s' % (object.customer_id.name)"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_wizard_form
+msgid "<span> to </span>"
+msgstr "<span> إلى </span>"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "<strong style=\"color: #875A7B;\">Partner:</strong>"
+msgstr "<strong style=\"color: #875A7B;\">الشريك:</strong>"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "<strong style=\"color: #875A7B;\">Period:</strong>"
+msgstr "<strong style=\"color: #875A7B;\">الفترة:</strong>"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Amount Paid"
+msgstr "المبلغ المدفوع"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__balance
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "CLOSING BALANCE:"
+msgstr "الرصيد الختامي:"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_wizard_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__create_uid
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__create_date
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__credit
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Credit"
+msgstr "دائن"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__customer_id
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__customer_id
+msgid "Customer"
+msgstr "العميل"
+
+#. module: customer_partner_ledger
+#: model:ir.actions.act_window,name:customer_partner_ledger.action_customer_ledger_wizard
+#: model:ir.actions.report,name:customer_partner_ledger.customer_ledger_report
+#: model:ir.ui.menu,name:customer_partner_ledger.menu_customer_ledger_report
+#: model:ir.ui.menu,name:customer_partner_ledger.menu_customer_ledger_report_wizard
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_report_tree
+msgid "Customer Ledger"
+msgstr "كشف حساب العميل"
+
+#. module: customer_partner_ledger
+#: model:ir.model,name:customer_partner_ledger.model_customer_ledger_report
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_wizard_form
+msgid "Customer Ledger Report"
+msgstr "تقرير كشف حساب العميل"
+
+#. module: customer_partner_ledger
+#: model:ir.model,name:customer_partner_ledger.model_customer_ledger_wizard
+msgid "Customer Ledger Wizard"
+msgstr "معالج كشف حساب العميل"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__date
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__date_from
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_wizard_form
+msgid "Date Range"
+msgstr "نطاق التاريخ"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__date_to
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__date_to
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__debit
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Debit"
+msgstr "مدين"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__description
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Description"
+msgstr "الوصف"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Discount %"
+msgstr "نسبة الخصم %"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__display_name
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_report_tree
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_wizard_form
+msgid "Export PDF"
+msgstr "تصدير PDF"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__id
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__write_uid
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: customer_partner_ledger
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_report__write_date
+#: model:ir.model.fields,field_description:customer_partner_ledger.field_customer_ledger_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Partner Ledger Report"
+msgstr "تقرير دفتر الشركاء"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Payment Reference"
+msgstr "مرجع الدفع"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.view_customer_ledger_wizard_form
+msgid "Preview Report"
+msgstr "معاينة التقرير"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Product"
+msgstr "المنتج"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Product Total"
+msgstr "إجمالي المنتجات"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Total with Tax"
+msgstr "الإجمالي شامل الضريبة"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Type"
+msgstr "النوع"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "UoM"
+msgstr "وحدة القياس"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "to"
+msgstr "إلى"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "▸ Payment Details"
+msgstr "▸ تفاصيل الدفع"
+
+#. module: customer_partner_ledger
+#: model_terms:ir.ui.view,arch_db:customer_partner_ledger.report_customer_ledger
+msgid "▸ Product Details"
+msgstr "▸ تفاصيل المنتج"
