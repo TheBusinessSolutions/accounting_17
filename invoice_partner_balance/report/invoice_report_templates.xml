@@ -7,7 +7,7 @@
                     <table class="table table-sm table-borderless">
                         <tbody>
                             <tr>
-                                <td class="text-start" t-translate="true">
+                                <td class="text-start">
                                     <strong>Balance Before this Invoice:</strong>
                                 </td>
                                 <td class="text-end">
@@ -16,7 +16,7 @@
                                 </td>
                             </tr>
                             <tr t-if="o.state == 'posted'">
-                                <td class="text-start" t-translate="true">
+                                <td class="text-start">
                                     <strong>Balance After this Invoice:</strong>
                                 </td>
                                 <td class="text-end">
