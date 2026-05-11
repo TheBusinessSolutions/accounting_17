@@ -34,3 +34,13 @@ msgstr "تحديث الرصيد"
 #: model_terms:ir.ui.view,arch_db:invoice_partner_balance.view_move_form_inherit_partner_balance
 msgid "Customer/Supplier Balance"
 msgstr "رصيد العميل / المورد"
+
+#. module: invoice_partner_balance
+#: code:invoice_partner_balance/models/account_move.py
+msgid "Balance Before this Invoice:"
+msgstr "الرصيد قبل هذه الفاتورة:"
+
+#. module: invoice_partner_balance
+#: code:invoice_partner_balance/models/account_move.py
+msgid "Balance After this Invoice:"
+msgstr "الرصيد بعد هذه الفاتورة:"

@@ -8,7 +8,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-start">
-                                    <strong t-out="env._('Balance Before this Invoice:')"/>
+                                    <strong t-out="o._get_balance_label('before')"/>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_before" 
@@ -17,7 +17,7 @@
                             </tr>
                             <tr t-if="o.state == 'posted'">
                                 <td class="text-start">
-                                    <strong t-out="env._('Balance After this Invoice:')"/>
+                                    <strong t-out="o._get_balance_label('after')"/>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_after" 
