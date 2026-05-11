@@ -8,7 +8,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-start">
-                                    <strong t-translate="true">Balance Before this Invoice:</strong>
+                                    <strong t-out="_t('Balance Before this Invoice:')"/>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_before" 
@@ -17,7 +17,7 @@
                             </tr>
                             <tr t-if="o.state == 'posted'">
                                 <td class="text-start">
-                                    <strong t-translate="true">Balance After this Invoice:</strong>
+                                    <strong t-out="_t('Balance After this Invoice:')"/>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_after" 
