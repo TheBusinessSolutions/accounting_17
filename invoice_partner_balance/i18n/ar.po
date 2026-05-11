@@ -16,31 +16,25 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #. module: invoice_partner_balance
-#: model:ir.model.fields,field_description:invoice_partner_balance.field_account_move__partner_balance_before
 msgid "Partner Balance Before"
 msgstr "رصيد الشريك قبل هذه الفاتورة"
 
 #. module: invoice_partner_balance
-#: model:ir.model.fields,field_description:invoice_partner_balance.field_account_move__partner_balance_after
 msgid "Partner Balance After"
 msgstr "رصيد الشريك بعد هذه الفاتورة"
 
 #. module: invoice_partner_balance
-#: model_terms:ir.ui.view,arch_db:invoice_partner_balance.view_move_form_inherit_partner_balance
 msgid "Refresh Balance"
 msgstr "تحديث الرصيد"
 
 #. module: invoice_partner_balance
-#: model_terms:ir.ui.view,arch_db:invoice_partner_balance.view_move_form_inherit_partner_balance
 msgid "Customer/Supplier Balance"
 msgstr "رصيد العميل / المورد"
 
 #. module: invoice_partner_balance
-#: code:invoice_partner_balance/models/account_move.py
 msgid "Balance Before this Invoice:"
 msgstr "الرصيد قبل هذه الفاتورة:"
 
 #. module: invoice_partner_balance
-#: code:invoice_partner_balance/models/account_move.py
 msgid "Balance After this Invoice:"
 msgstr "الرصيد بعد هذه الفاتورة:"
