@@ -13,7 +13,6 @@
                                           t-options="{'widget': 'monetary', 'display_currency': o.company_currency_id}"/>
                                 </td>
                             </tr>
-                            <!-- Only show "Balance After" when invoice is actually posted -->
                             <tr t-if="o.state == 'posted'">
                                 <td class="text-start"><strong>Balance After this Invoice:</strong></td>
                                 <td class="text-end">
