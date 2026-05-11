@@ -49,10 +49,3 @@ class AccountMove(models.Model):
                 'partner_balance_after': balance_before + amount_total_company,
             })
         return True
-    def _get_balance_label(self, label_type):
-        """Return translated balance labels for PDF reports."""
-        labels = {
-            'before': 'Balance Before this Invoice:',
-            'after': 'Balance After this Invoice:',
-        }
-        return self.env._(labels.get(label_type, ''))

@@ -7,8 +7,8 @@
                     <table class="table table-sm table-borderless">
                         <tbody>
                             <tr>
-                                <td class="text-start">
-                                    <strong t-out="o._get_balance_label('before')"/>
+                                <td class="text-start" t-translate="true">
+                                    <strong>Balance Before this Invoice:</strong>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_before" 
@@ -16,8 +16,8 @@
                                 </td>
                             </tr>
                             <tr t-if="o.state == 'posted'">
-                                <td class="text-start">
-                                    <strong t-out="o._get_balance_label('after')"/>
+                                <td class="text-start" t-translate="true">
+                                    <strong>Balance After this Invoice:</strong>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_after" 
