@@ -32,9 +32,9 @@ msgid "Customer/Supplier Balance"
 msgstr "رصيد العميل / المورد"
 
 #. module: invoice_partner_balance
-msgid "Balance Before this Invoice:"
+msgid "Balance before this Invoice"
 msgstr "الرصيد قبل هذه الفاتورة:"
 
 #. module: invoice_partner_balance
-msgid "Balance After this Invoice:"
+msgid "Balance After this Invoice"
 msgstr "الرصيد بعد هذه الفاتورة:"

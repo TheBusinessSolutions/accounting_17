@@ -8,7 +8,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-start">
-                                    <strong>الرصيد قبل اصدار الفاتورة:</strong>
+                                    <strong>Balance before this Invoice</strong>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_before" 
@@ -17,7 +17,7 @@
                             </tr>
                             <tr t-if="o.state == 'posted'">
                                 <td class="text-start">
-                                    <strong>الرصيد بعد اصدار الفاتورة:</strong>
+                                    <strong>Balance After this Invoice</strong>
                                 </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_after" 
