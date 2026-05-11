@@ -7,14 +7,18 @@
                     <table class="table table-sm table-borderless">
                         <tbody>
                             <tr>
-                                <td class="text-start"><strong>Balance Before this Invoice:</strong></td>
+                                <td class="text-start">
+                                    <strong t-translate="true">Balance Before this Invoice:</strong>
+                                </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_before" 
                                           t-options="{'widget': 'monetary', 'display_currency': o.company_currency_id}"/>
                                 </td>
                             </tr>
                             <tr t-if="o.state == 'posted'">
-                                <td class="text-start"><strong>Balance After this Invoice:</strong></td>
+                                <td class="text-start">
+                                    <strong t-translate="true">Balance After this Invoice:</strong>
+                                </td>
                                 <td class="text-end">
                                     <span t-field="o.partner_balance_after" 
                                           t-options="{'widget': 'monetary', 'display_currency': o.company_currency_id}"/>
