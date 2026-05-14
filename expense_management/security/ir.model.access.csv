@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_expense_statement,expense.statement,model_expense_statement,account.group_account_invoice,1,1,1,1
+access_expense_statement_line,expense.statement.line,model_expense_statement_line,account.group_account_invoice,1,1,1,1
