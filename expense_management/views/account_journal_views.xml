@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_account_journal_form_inherit" model="ir.ui.view">
-        <field name="name">account.journal.form.inherit</field>
+    <record id="view_account_journal_form_inherit_expense" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit.expense</field>
         <field name="model">account.journal</field>
         <field name="inherit_id" ref="account.view_account_journal_form"/>
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <button name="%(action_expense_statement)d" 
+                <button name="%(expense_management.action_expense_statement)d" 
                         type="action" 
                         class="oe_stat_button" 
                         icon="fa-list" 

@@ -5,5 +5,7 @@
         <code>expense.statement</code>
         <prefix>STMT/%(year)s/</prefix>
         <padding>4</padding>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
     </record>
 </odoo>
