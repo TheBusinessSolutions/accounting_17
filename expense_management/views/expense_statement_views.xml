@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- FORM VIEW -->
     <record id="view_expense_statement_form" model="ir.ui.view">
         <field name="name">expense.statement.form</field>
         <field name="model">expense.statement</field>
         <field name="arch" type="xml">
             <form string="Expense Statement">
+
                 <header>
                     <button name="action_validate"
                             string="Validate"
@@ -22,6 +24,7 @@
                 </header>
 
                 <sheet>
+
                     <div class="oe_title">
                         <h1>
                             <field name="name" readonly="1"/>
@@ -30,33 +33,47 @@
 
                     <group>
                         <group>
-                            <field name="journal_id" readonly="state == 'posted'"/>
-                            <field name="date" readonly="state == 'posted'"/>
+                            <field name="journal_id"
+                                   domain="[('type', 'in', ['bank', 'cash'])]"
+                                   readonly="state == 'posted'"/>
+
+                            <field name="date"
+                                   readonly="state == 'posted'"/>
                         </group>
 
                         <group>
-                            <field name="description" readonly="state == 'posted'"/>
-                            <field name="move_id" invisible="not move_id"/>
+                            <field name="description"
+                                   readonly="state == 'posted'"/>
+
+                            <field name="move_id"
+                                   invisible="not move_id"/>
                         </group>
                     </group>
 
                     <notebook>
                         <page string="Transactions">
-                            <field name="line_ids" readonly="state == 'posted'">
+
+                            <field name="line_ids"
+                                   readonly="state == 'posted'">
+
                                 <tree editable="bottom">
                                     <field name="transaction_type"/>
                                     <field name="account_id"/>
                                     <field name="note"/>
                                     <field name="amount"/>
                                 </tree>
+
                             </field>
+
                         </page>
                     </notebook>
+
                 </sheet>
             </form>
         </field>
     </record>
 
+    <!-- TREE VIEW -->
     <record id="view_expense_statement_tree" model="ir.ui.view">
         <field name="name">expense.statement.tree</field>
         <field name="model">expense.statement</field>
@@ -73,16 +90,19 @@
         </field>
     </record>
 
+    <!-- ACTION -->
     <record id="action_expense_statement" model="ir.actions.act_window">
-        <field name="name">Register Expenses</field>
+        <field name="name">Expense Statements</field>
         <field name="res_model">expense.statement</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
     </record>
 
-    <menuitem id="menu_expense_statement_root"
-              name="Register Expenses"
-              parent="account.menu_finance_entries"
+    <!-- MENU -->
+    <menuitem id="menu_expense_statement"
+              name="Expense Statements"
+              parent="account.menu_finance"
               action="action_expense_statement"
-              sequence="20"/>
+              sequence="35"/>
 
 </odoo>

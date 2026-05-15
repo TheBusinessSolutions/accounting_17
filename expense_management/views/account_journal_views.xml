@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_account_journal_form_inherit_expense" model="ir.ui.view">
-        <field name="name">account.journal.form.inherit.expense</field>
+    <record id="view_account_journal_form_inherit_expense"
+            model="ir.ui.view">
+
+        <field name="name">
+            account.journal.form.inherit.expense
+        </field>
+
         <field name="model">account.journal</field>
-        <field name="inherit_id" ref="account.view_account_journal_form"/>
+
+        <field name="inherit_id"
+               ref="account.view_account_journal_form"/>
+
         <field name="arch" type="xml">
 
-            <xpath expr="//div[@name='button_box']" position="inside">
+            <xpath expr="//div[@name='button_box']"
+                   position="inside">
 
                 <button name="%(action_expense_statement)d"
                         type="action"
                         class="oe_stat_button"
-                        icon="fa-list"
-                        context="{'search_default_journal_id': active_id, 'default_journal_id': active_id}">
+                        icon="fa-money"
+                        invisible="type not in ('bank', 'cash')"
+                        context="{
+                            'default_journal_id': id,
+                            'search_default_journal_id': id
+                        }">
 
                     <div class="o_stat_info">
-                        <span class="o_stat_text">Statements</span>
+                        <span class="o_stat_text">
+                            Expense Sheet
+                        </span>
                     </div>
 
                 </button>
@@ -24,6 +39,7 @@
             </xpath>
 
         </field>
+
     </record>
 
 </odoo>
