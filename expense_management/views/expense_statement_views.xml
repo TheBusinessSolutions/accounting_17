@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="view_expense_statement_form" model="ir.ui.view">
         <field name="name">expense.statement.form</field>
         <field name="model">expense.statement</field>
         <field name="arch" type="xml">
-            <form>
+            <form string="Expense Statement">
                 <header>
-                    <button name="action_validate" string="Validate" type="object" class="oe_highlight" invisible="state != 'draft'"/>
-                    <button name="action_draft" string="Reset to Draft" type="object" invisible="state != 'posted'"/>
+                    <button name="action_validate"
+                            string="Validate"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state != 'draft'"/>
+
+                    <button name="action_draft"
+                            string="Reset to Draft"
+                            type="object"
+                            invisible="state != 'posted'"/>
+
                     <field name="state" widget="statusbar"/>
                 </header>
+
                 <sheet>
                     <div class="oe_title">
-                        <h1><field name="name"/></h1>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
                     </div>
+
                     <group>
                         <group>
                             <field name="journal_id" readonly="state == 'posted'"/>
                             <field name="date" readonly="state == 'posted'"/>
                         </group>
+
                         <group>
                             <field name="description" readonly="state == 'posted'"/>
                             <field name="move_id" invisible="not move_id"/>
                         </group>
                     </group>
+
                     <notebook>
                         <page string="Transactions">
                             <field name="line_ids" readonly="state == 'posted'">
@@ -49,7 +65,10 @@
                 <field name="name"/>
                 <field name="date"/>
                 <field name="journal_id"/>
-                <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'posted'"/>
+                <field name="state"
+                       widget="badge"
+                       decoration-info="state == 'draft'"
+                       decoration-success="state == 'posted'"/>
             </tree>
         </field>
     </record>
@@ -60,5 +79,10 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_expense_statement_root" name="Register Expenses" parent="account.menu_finance_entries" action="action_expense_statement" sequence="20"/>
+    <menuitem id="menu_expense_statement_root"
+              name="Register Expenses"
+              parent="account.menu_finance_entries"
+              action="action_expense_statement"
+              sequence="20"/>
+
 </odoo>

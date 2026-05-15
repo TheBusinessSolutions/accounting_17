@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
-    <record id="seq_expense_statement" model="ir.sequence">
-        <name>Expense Statement</name>
-        <code>expense.statement</code>
-        <prefix>STMT/%(year)s/</prefix>
-        <padding>4</padding>
-        <field name="number_next">1</field>
-        <field name="number_increment">1</field>
-    </record>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_expense_statement" model="ir.sequence">
+            <field name="name">Expense Statement</field>
+            <field name="code">expense.statement</field>
+            <field name="prefix">STMT/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
 </odoo>
