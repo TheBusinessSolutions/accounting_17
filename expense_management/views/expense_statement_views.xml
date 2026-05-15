@@ -60,9 +60,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_expense_statement_root" 
-              name="Register Expenses" 
-              parent="account.menu_finance_entries" 
-              action="action_expense_statement" 
-              sequence="20"/>
+    <menuitem id="menu_expense_statement_root" name="Register Expenses" parent="account.menu_finance_entries" action="action_expense_statement" sequence="20"/>
 </odoo>
